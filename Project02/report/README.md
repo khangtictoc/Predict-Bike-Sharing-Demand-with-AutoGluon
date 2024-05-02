@@ -44,19 +44,20 @@ Trust Entities:
 
 ```json
 {
-    "Version": "2012-10-17",
-    "Statement": [
-        {
-            "Effect": "Allow",
-            "Principal": {
-                "Service": [
-                    "lambda.amazonaws.com",
-                    "states.amazonaws.com"
-                ]
-            },
-            "Action": "sts:AssumeRole"
-        }
-    ]
+	"Version": "2012-10-17",
+	"Statement": [
+		{
+			"Effect": "Allow",
+			"Principal": {
+				"Service": [
+					"lambda.amazonaws.com",
+					"states.amazonaws.com",
+					"sagemaker.amazonaws.com"
+				]
+			},
+			"Action": "sts:AssumeRole"
+		}
+	]
 }
 ```
 
@@ -117,6 +118,11 @@ Same as successful one, the prominent difference lies in "Error Handling"
     <img src="img/errorHandling.png" alt="errorHandling">
 </p>
 
+Output of whole Step function:
+
+<p align="center">
+    <img src="img/finalOutput.png" alt="errorHandling">
+</p>
 
 Email of successful execution:
 
